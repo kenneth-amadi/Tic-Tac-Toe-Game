@@ -62,76 +62,88 @@ class MainActivity : AppCompatActivity() {
                     if (player == "B") {
                         Handler(Looper.getMainLooper()).postDelayed(
                             {
-                                /// ROW 1
-                                if (items[row1[0]] == "X" && items[row1[1]] == "X" && items[row1[2]] != "O") {
+                                /// ROW 1b
+                                if (items[row1[0]] == "O" && items[row1[1]] == "O" && items[row1[2]] != "X") {
                                     items[row1[2]] = "O"
                                     player = "A"
                                     mAdapter.notifyItemChanged(row1[2])
 
-                                } else if (items[row1[0]] == "X" && items[row1[2]] == "X" && items[row1[1]] != "O") {
+                                } else if (items[row1[0]] == "O" && items[row1[2]] == "O" && items[row1[1]] != "X") {
                                     items[row1[1]] = "O"
                                     player = "A"
                                     mAdapter.notifyItemChanged(row1[1])
 
-                                } else if (items[row1[1]] == "X" && items[row1[2]] == "X" && items[row1[0]] != "O") {
+                                } else if (items[row1[1]] == "O" && items[row1[2]] == "O" && items[row1[0]] != "X") {
                                     items[row1[0]] = "O"
                                     player = "A"
                                     mAdapter.notifyItemChanged(row1[0])
 
                                 } else
 
-                                /// ROW 2
-                                    if (items[row2[0]] == "X" && items[row2[1]] == "X" && items[row2[2]] != "O") {
+                                /// ROW 2b
+                                    if (items[row2[0]] == "O" && items[row2[1]] == "O" && items[row2[2]] != "X") {
                                         items[row2[2]] = "O"
                                         player = "A"
-                                        mAdapter.notifyItemChanged(row2[2])
+                                        mAdapter.notifyItemChanged(
+                                            row2[2]
+                                        )
 
-                                    } else if (items[row2[0]] == "X" && items[row2[2]] == "X" && items[row2[1]] != "O") {
+                                    } else if (items[row2[0]] == "O" && items[row2[2]] == "O" && items[row2[1]] != "X") {
                                         items[row2[1]] = "O"
                                         player = "A"
-                                        mAdapter.notifyItemChanged(row2[1])
+                                        mAdapter.notifyItemChanged(
+                                            row2[1]
+                                        )
 
-                                    } else if (items[row2[1]] == "X" && items[row2[2]] == "X" && items[row2[0]] != "O") {
+                                    } else if (items[row2[1]] == "O" && items[row2[2]] == "O" && items[row2[0]] != "X") {
                                         items[row2[0]] = "O"
                                         player = "A"
-                                        mAdapter.notifyItemChanged(row2[0])
+                                        mAdapter.notifyItemChanged(
+                                            row2[0]
+                                        )
 
                                     } else
 
-                                    /// ROW 3
-                                        if (items[row3[0]] == "X" && items[row3[1]] == "X" && items[row3[2]] != "O") {
+                                    /// ROW 3b
+                                        if (items[row3[0]] == "O" && items[row3[1]] == "O" && items[row3[2]] != "X") {
                                             items[row3[2]] = "O"
                                             player = "A"
-                                            mAdapter.notifyItemChanged(row3[2])
+                                            mAdapter.notifyItemChanged(
+                                                row3[2]
+                                            )
 
-                                        } else if (items[row3[0]] == "X" && items[row3[2]] == "X" && items[row3[1]] != "O") {
+                                        } else if (items[row3[0]] == "O" && items[row3[2]] == "O" && items[row3[1]] != "X") {
                                             items[row3[1]] = "O"
                                             player = "A"
-                                            mAdapter.notifyItemChanged(row3[1])
+                                            mAdapter.notifyItemChanged(
+                                                row3[1]
+                                            )
 
-                                        } else if (items[row3[1]] == "X" && items[row3[2]] == "X" && items[row3[0]] != "O") {
+                                        } else if (items[row3[1]] == "O" && items[row3[2]] == "O" && items[row3[0]] != "X") {
                                             items[row3[0]] = "O"
                                             player = "A"
-                                            mAdapter.notifyItemChanged(row3[0])
+                                            mAdapter.notifyItemChanged(
+                                                row3[0]
+                                            )
 
                                         } else
 
-                                        /// COL 1
-                                            if (items[col1[0]] == "X" && items[col1[1]] == "X" && items[col1[2]] != "O") {
+                                        /// COL 1b
+                                            if (items[col1[0]] == "O" && items[col1[1]] == "O" && items[col1[2]] != "X") {
                                                 items[col1[2]] = "O"
                                                 player = "A"
                                                 mAdapter.notifyItemChanged(
                                                     col1[2]
                                                 )
 
-                                            } else if (items[col1[0]] == "X" && items[col1[2]] == "X" && items[col1[1]] != "O") {
+                                            } else if (items[col1[0]] == "O" && items[col1[2]] == "O" && items[col1[1]] != "X") {
                                                 items[col1[1]] = "O"
                                                 player = "A"
                                                 mAdapter.notifyItemChanged(
                                                     col1[1]
                                                 )
 
-                                            } else if (items[col1[1]] == "X" && items[col1[2]] == "X" && items[col1[0]] != "O") {
+                                            } else if (items[col1[1]] == "O" && items[col1[2]] == "O" && items[col1[0]] != "X") {
                                                 items[col1[0]] = "O"
                                                 player = "A"
                                                 mAdapter.notifyItemChanged(
@@ -140,8 +152,8 @@ class MainActivity : AppCompatActivity() {
 
                                             } else
 
-                                            /// COL 2
-                                                if (items[col2[0]] == "X" && items[col2[1]] == "X" && items[col2[2]] != "O") {
+                                            /// COL 2b
+                                                if (items[col2[0]] == "O" && items[col2[1]] == "O" && items[col2[2]] != "X") {
                                                     items[col2[2]] =
                                                         "O"
                                                     player = "A"
@@ -149,7 +161,7 @@ class MainActivity : AppCompatActivity() {
                                                         col2[2]
                                                     )
 
-                                                } else if (items[col2[0]] == "X" && items[col2[2]] == "X" && items[col2[1]] != "O") {
+                                                } else if (items[col2[0]] == "O" && items[col2[2]] == "O" && items[col2[1]] != "X") {
                                                     items[col2[1]] =
                                                         "O"
                                                     player = "A"
@@ -157,7 +169,7 @@ class MainActivity : AppCompatActivity() {
                                                         col2[1]
                                                     )
 
-                                                } else if (items[col2[1]] == "X" && items[col2[2]] == "X" && items[col2[0]] != "O") {
+                                                } else if (items[col2[1]] == "O" && items[col2[2]] == "O" && items[col2[0]] != "X") {
                                                     items[col2[0]] =
                                                         "O"
                                                     player =
@@ -168,8 +180,8 @@ class MainActivity : AppCompatActivity() {
 
                                                 } else
 
-                                                /// COL 3
-                                                    if (items[col3[0]] == "X" && items[col3[1]] == "X" && items[col3[2]] != "O") {
+                                                /// COL 3b
+                                                    if (items[col3[0]] == "O" && items[col3[1]] == "O" && items[col3[2]] != "X") {
                                                         items[col3[2]] =
                                                             "O"
                                                         player =
@@ -178,7 +190,7 @@ class MainActivity : AppCompatActivity() {
                                                             col3[2]
                                                         )
 
-                                                    } else if (items[col3[0]] == "X" && items[col3[2]] == "X" && items[col3[1]] != "O") {
+                                                    } else if (items[col3[0]] == "O" && items[col3[2]] == "O" && items[col3[1]] != "X") {
                                                         items[col3[1]] =
                                                             "O"
                                                         player =
@@ -187,7 +199,7 @@ class MainActivity : AppCompatActivity() {
                                                             col3[1]
                                                         )
 
-                                                    } else if (items[col3[1]] == "X" && items[col3[2]] == "X" && items[col3[0]] != "O") {
+                                                    } else if (items[col3[1]] == "O" && items[col3[2]] == "O" && items[col3[0]] != "X") {
                                                         items[col3[0]] =
                                                             "O"
                                                         player =
@@ -198,8 +210,8 @@ class MainActivity : AppCompatActivity() {
 
                                                     } else
 
-                                                    /// DIA 1
-                                                        if (items[dia1[0]] == "X" && items[dia1[1]] == "X" && items[dia1[2]] != "O") {
+                                                    /// DIA 1b
+                                                        if (items[dia1[0]] == "O" && items[dia1[1]] == "O" && items[dia1[2]] != "X") {
                                                             items[dia1[2]] =
                                                                 "O"
                                                             player =
@@ -208,7 +220,7 @@ class MainActivity : AppCompatActivity() {
                                                                 dia1[2]
                                                             )
 
-                                                        } else if (items[dia1[0]] == "X" && items[dia1[2]] == "X" && items[dia1[1]] != "O") {
+                                                        } else if (items[dia1[0]] == "O" && items[dia1[2]] == "O" && items[dia1[1]] != "X") {
                                                             items[dia1[1]] =
                                                                 "O"
                                                             player =
@@ -217,7 +229,7 @@ class MainActivity : AppCompatActivity() {
                                                                 dia1[1]
                                                             )
 
-                                                        } else if (items[dia1[1]] == "X" && items[dia1[2]] == "X" && items[dia1[0]] != "O") {
+                                                        } else if (items[dia1[1]] == "O" && items[dia1[2]] == "O" && items[dia1[0]] != "X") {
                                                             items[dia1[0]] =
                                                                 "O"
                                                             player =
@@ -228,8 +240,8 @@ class MainActivity : AppCompatActivity() {
 
                                                         } else
 
-                                                        /// DIA 2
-                                                            if (items[dia2[0]] == "X" && items[dia2[1]] == "X" && items[dia2[2]] != "O") {
+                                                        /// DIA 2b
+                                                            if (items[dia2[0]] == "O" && items[dia2[1]] == "O" && items[dia2[2]] != "X") {
                                                                 items[dia2[2]] =
                                                                     "O"
                                                                 player =
@@ -238,7 +250,7 @@ class MainActivity : AppCompatActivity() {
                                                                     dia2[2]
                                                                 )
 
-                                                            } else if (items[dia2[0]] == "X" && items[dia2[2]] == "X" && items[dia2[1]] != "O") {
+                                                            } else if (items[dia2[0]] == "O" && items[dia2[2]] == "O" && items[dia2[1]] != "X") {
                                                                 items[dia2[1]] =
                                                                     "O"
                                                                 player =
@@ -247,7 +259,7 @@ class MainActivity : AppCompatActivity() {
                                                                     dia2[1]
                                                                 )
 
-                                                            } else if (items[dia2[1]] == "X" && items[dia2[2]] == "X" && items[dia2[0]] != "O") {
+                                                            } else if (items[dia2[1]] == "O" && items[dia2[2]] == "O" && items[dia2[0]] != "X") {
                                                                 items[dia2[0]] =
                                                                     "O"
                                                                 player =
@@ -257,14 +269,227 @@ class MainActivity : AppCompatActivity() {
                                                                 )
 
                                                             } else
-                                                                for (s in ls) {
-                                                                    if (items[s] == "") {
-                                                                        items[s] = "O"
+
+                                                            /// ROW 1
+                                                                if (items[row1[0]] == "X" && items[row1[1]] == "X" && items[row1[2]] != "O") {
+                                                                    items[row1[2]] = "O"
+                                                                    player = "A"
+                                                                    mAdapter.notifyItemChanged(row1[2])
+
+                                                                } else if (items[row1[0]] == "X" && items[row1[2]] == "X" && items[row1[1]] != "O") {
+                                                                    items[row1[1]] = "O"
+                                                                    player = "A"
+                                                                    mAdapter.notifyItemChanged(row1[1])
+
+                                                                } else if (items[row1[1]] == "X" && items[row1[2]] == "X" && items[row1[0]] != "O") {
+                                                                    items[row1[0]] = "O"
+                                                                    player = "A"
+                                                                    mAdapter.notifyItemChanged(row1[0])
+
+                                                                } else
+
+                                                                /// ROW 2--
+                                                                    if (items[row2[0]] == "X" && items[row2[1]] == "X" && items[row2[2]] != "O") {
+                                                                        items[row2[2]] = "O"
                                                                         player = "A"
-                                                                        mAdapter.notifyItemChanged(s)
-                                                                        break
-                                                                    }
-                                                                }
+                                                                        mAdapter.notifyItemChanged(
+                                                                            row2[2]
+                                                                        )
+
+                                                                    } else if (items[row2[0]] == "X" && items[row2[2]] == "X" && items[row2[1]] != "O") {
+                                                                        items[row2[1]] = "O"
+                                                                        player = "A"
+                                                                        mAdapter.notifyItemChanged(
+                                                                            row2[1]
+                                                                        )
+
+                                                                    } else if (items[row2[1]] == "X" && items[row2[2]] == "X" && items[row2[0]] != "O") {
+                                                                        items[row2[0]] = "O"
+                                                                        player = "A"
+                                                                        mAdapter.notifyItemChanged(
+                                                                            row2[0]
+                                                                        )
+
+                                                                    } else
+
+                                                                    /// ROW 3
+                                                                        if (items[row3[0]] == "X" && items[row3[1]] == "X" && items[row3[2]] != "O") {
+                                                                            items[row3[2]] = "O"
+                                                                            player = "A"
+                                                                            mAdapter.notifyItemChanged(
+                                                                                row3[2]
+                                                                            )
+
+                                                                        } else if (items[row3[0]] == "X" && items[row3[2]] == "X" && items[row3[1]] != "O") {
+                                                                            items[row3[1]] = "O"
+                                                                            player = "A"
+                                                                            mAdapter.notifyItemChanged(
+                                                                                row3[1]
+                                                                            )
+
+                                                                        } else if (items[row3[1]] == "X" && items[row3[2]] == "X" && items[row3[0]] != "O") {
+                                                                            items[row3[0]] = "O"
+                                                                            player = "A"
+                                                                            mAdapter.notifyItemChanged(
+                                                                                row3[0]
+                                                                            )
+
+                                                                        } else
+
+                                                                        /// COL 1
+                                                                            if (items[col1[0]] == "X" && items[col1[1]] == "X" && items[col1[2]] != "O") {
+                                                                                items[col1[2]] = "O"
+                                                                                player = "A"
+                                                                                mAdapter.notifyItemChanged(
+                                                                                    col1[2]
+                                                                                )
+
+                                                                            } else if (items[col1[0]] == "X" && items[col1[2]] == "X" && items[col1[1]] != "O") {
+                                                                                items[col1[1]] = "O"
+                                                                                player = "A"
+                                                                                mAdapter.notifyItemChanged(
+                                                                                    col1[1]
+                                                                                )
+
+                                                                            } else if (items[col1[1]] == "X" && items[col1[2]] == "X" && items[col1[0]] != "O") {
+                                                                                items[col1[0]] = "O"
+                                                                                player = "A"
+                                                                                mAdapter.notifyItemChanged(
+                                                                                    col1[0]
+                                                                                )
+
+                                                                            } else
+
+                                                                            /// COL 2
+                                                                                if (items[col2[0]] == "X" && items[col2[1]] == "X" && items[col2[2]] != "O") {
+                                                                                    items[col2[2]] =
+                                                                                        "O"
+                                                                                    player = "A"
+                                                                                    mAdapter.notifyItemChanged(
+                                                                                        col2[2]
+                                                                                    )
+
+                                                                                } else if (items[col2[0]] == "X" && items[col2[2]] == "X" && items[col2[1]] != "O") {
+                                                                                    items[col2[1]] =
+                                                                                        "O"
+                                                                                    player = "A"
+                                                                                    mAdapter.notifyItemChanged(
+                                                                                        col2[1]
+                                                                                    )
+
+                                                                                } else if (items[col2[1]] == "X" && items[col2[2]] == "X" && items[col2[0]] != "O") {
+                                                                                    items[col2[0]] =
+                                                                                        "O"
+                                                                                    player =
+                                                                                        "A"
+                                                                                    mAdapter.notifyItemChanged(
+                                                                                        col2[0]
+                                                                                    )
+
+                                                                                } else
+
+                                                                                /// COL 3
+                                                                                    if (items[col3[0]] == "X" && items[col3[1]] == "X" && items[col3[2]] != "O") {
+                                                                                        items[col3[2]] =
+                                                                                            "O"
+                                                                                        player =
+                                                                                            "A"
+                                                                                        mAdapter.notifyItemChanged(
+                                                                                            col3[2]
+                                                                                        )
+
+                                                                                    } else if (items[col3[0]] == "X" && items[col3[2]] == "X" && items[col3[1]] != "O") {
+                                                                                        items[col3[1]] =
+                                                                                            "O"
+                                                                                        player =
+                                                                                            "A"
+                                                                                        mAdapter.notifyItemChanged(
+                                                                                            col3[1]
+                                                                                        )
+
+                                                                                    } else if (items[col3[1]] == "X" && items[col3[2]] == "X" && items[col3[0]] != "O") {
+                                                                                        items[col3[0]] =
+                                                                                            "O"
+                                                                                        player =
+                                                                                            "A"
+                                                                                        mAdapter.notifyItemChanged(
+                                                                                            col3[0]
+                                                                                        )
+
+                                                                                    } else
+
+                                                                                    /// DIA 1
+                                                                                        if (items[dia1[0]] == "X" && items[dia1[1]] == "X" && items[dia1[2]] != "O") {
+                                                                                            items[dia1[2]] =
+                                                                                                "O"
+                                                                                            player =
+                                                                                                "A"
+                                                                                            mAdapter.notifyItemChanged(
+                                                                                                dia1[2]
+                                                                                            )
+
+                                                                                        } else if (items[dia1[0]] == "X" && items[dia1[2]] == "X" && items[dia1[1]] != "O") {
+                                                                                            items[dia1[1]] =
+                                                                                                "O"
+                                                                                            player =
+                                                                                                "A"
+                                                                                            mAdapter.notifyItemChanged(
+                                                                                                dia1[1]
+                                                                                            )
+
+                                                                                        } else if (items[dia1[1]] == "X" && items[dia1[2]] == "X" && items[dia1[0]] != "O") {
+                                                                                            items[dia1[0]] =
+                                                                                                "O"
+                                                                                            player =
+                                                                                                "A"
+                                                                                            mAdapter.notifyItemChanged(
+                                                                                                dia1[0]
+                                                                                            )
+
+                                                                                        } else
+
+                                                                                        /// DIA 2
+                                                                                            if (items[dia2[0]] == "X" && items[dia2[1]] == "X" && items[dia2[2]] != "O") {
+                                                                                                items[dia2[2]] =
+                                                                                                    "O"
+                                                                                                player =
+                                                                                                    "A"
+                                                                                                mAdapter.notifyItemChanged(
+                                                                                                    dia2[2]
+                                                                                                )
+
+                                                                                            } else if (items[dia2[0]] == "X" && items[dia2[2]] == "X" && items[dia2[1]] != "O") {
+                                                                                                items[dia2[1]] =
+                                                                                                    "O"
+                                                                                                player =
+                                                                                                    "A"
+                                                                                                mAdapter.notifyItemChanged(
+                                                                                                    dia2[1]
+                                                                                                )
+
+                                                                                            } else if (items[dia2[1]] == "X" && items[dia2[2]] == "X" && items[dia2[0]] != "O") {
+                                                                                                items[dia2[0]] =
+                                                                                                    "O"
+                                                                                                player =
+                                                                                                    "A"
+                                                                                                mAdapter.notifyItemChanged(
+                                                                                                    dia2[0]
+                                                                                                )
+
+                                                                                            } else
+
+                                                                                                for (s in ls) {
+                                                                                                    if (items[s] == "") {
+                                                                                                        items[s] =
+                                                                                                            "O"
+                                                                                                        player =
+                                                                                                            "A"
+                                                                                                        mAdapter.notifyItemChanged(
+                                                                                                            s
+                                                                                                        )
+                                                                                                        break
+                                                                                                    }
+                                                                                                }
 
 
                             }, 500
