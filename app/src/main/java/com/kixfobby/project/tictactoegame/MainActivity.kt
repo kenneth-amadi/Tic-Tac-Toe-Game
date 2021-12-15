@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 items[position] = ""
                 mAdapter.notifyItemChanged(position)
             }
-            Toast.makeText(this@MainActivity, "GAME RESTARTED!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity, "GAME STARTED!", Toast.LENGTH_SHORT).show()
         }
 
         val listener = object : BaseGridAdapter.OnItemClickListener {
@@ -51,10 +51,6 @@ class MainActivity : AppCompatActivity() {
                 if (!isClickable) {
                     return
                 } else {
-                    for (a in 0..3) {
-                        val r = 0..8
-                        ls.add(r.random())
-                    }
 
                     if (player == "A") {
                         items[position] = "X"
@@ -468,7 +464,16 @@ class MainActivity : AppCompatActivity() {
                                                                                                     dia2[0]
                                                                                                 )
 
-                                                                                            } else
+                                                                                            } else {
+
+                                                                                                for (a in 0..3) {
+                                                                                                    ls.clear()
+                                                                                                    val r =
+                                                                                                        0..8
+                                                                                                    ls.add(
+                                                                                                        r.random()
+                                                                                                    )
+                                                                                                }
 
                                                                                                 for (s in ls) {
                                                                                                     if (items[s] == "") {
@@ -480,7 +485,9 @@ class MainActivity : AppCompatActivity() {
                                                                                                         )
                                                                                                         break
                                                                                                     }
+
                                                                                                 }
+                                                                                            }
 
 
                             }, 500
